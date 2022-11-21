@@ -6,14 +6,10 @@ let input = "f02b931c-52f0-4507-9406-f1221678dc16"
 let zeroNum = 4
 
 function getHash(input,zeroNum) {
-    let zeros = '0'
-    while(true) {
-        zeros = zeros + '0'
-        if(zeros.length === zeroNum) {
-            break
-        }
-    }
+    let zeros = '0'.repeat(zeroNum);
+
     let postfix = 0;
+
     while(true) {
          postfix++;
          postfixString = postfix.toString() 
